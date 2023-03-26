@@ -22,8 +22,18 @@ body {
 
 main {
     border-radius: 8px;
-    overflow: hidden;
     background-color: #fff;
+}
+
+@media (min-width: 800px) {
+    body {
+        padding: 0 22.5rem;
+    }
+
+    main {
+        display: flex;
+        max-width: 750px;
+    }
 }
 
 picture {
@@ -32,6 +42,14 @@ picture {
     background-position: 0 0;
     background-size: 100%;
     min-height: 13.5rem;
+    border-radius: 8px 0 0 8px;
+}
+
+@media (min-width: 800px) {
+    picture {
+        min-width: 18rem;
+        background-size: cover;
+    }
 }
 
 article {
@@ -40,6 +58,7 @@ article {
     gap: 0.8125rem;
     padding: 2.5rem 2rem 1rem 2rem;
     color: var(--desaturated-dark-blue);
+    position: relative;
 }
 
 article > h1 {
@@ -74,4 +93,44 @@ article > h1 {
     background-color: var(--light-grayish-blue);
     padding: 0.5rem;
     border-radius: 50%;
+}
+
+.share-modal {
+    display: none;
+}
+
+.share-modal > p {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--grayish-blue);
+}
+
+@media (min-width: 800px) {
+    article {
+        padding: 2rem 2.5rem 2rem 2.5rem;
+    }
+
+    article > h1 {
+        font-size: 1.2rem;
+    }
+
+    .author {
+        margin-top: 0.5rem;
+    }
+
+    .share-modal {
+        display: none;
+        background-color: var(--very-dark-grayish-blue);
+        gap: 1rem;
+        padding: 1rem 2.5rem;
+        border-radius: 8px;
+        position: absolute;
+        top: 50%;
+        right: -18%;
+    }
+
+    .share-active {
+        background-color: var(--very-dark-grayish-blue);
+        color: white;
+    }
 }
