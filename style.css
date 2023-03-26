@@ -9,3 +9,69 @@
     --fw-medium: 500;
     --fw-bold: 700;
 }
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-base);
+    min-height: 100vh;
+    background-color: var(--light-grayish-blue);
+    display: grid;
+    place-content: center;
+    padding: 5rem 1.5rem;
+}
+
+main {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+picture {
+    background: url(images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    min-height: 13.5rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8125rem;
+    padding: 2.5rem 2rem 1rem 2rem;
+    color: var(--desaturated-dark-blue);
+}
+
+article > h1 {
+    font-size: 1rem;
+    color: var(--very-dark-grayish-blue);
+    font-weight: var(--fw-bold);
+}
+
+.author {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.author-name {
+    color: var(--very-dark-grayish-blue);
+    font-weight: var(--fw-bold);
+}
+
+.article-date {
+    color: var(--grayish-blue);
+}
+
+.profile-img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.share {
+    background-color: var(--light-grayish-blue);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
