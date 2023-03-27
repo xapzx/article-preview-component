@@ -7,7 +7,9 @@ share.addEventListener("click", () => {
     console.log(modal);
     if(modal.style.display === "flex") {
         modal.style.display = "none";
+        share.src = "./images/icon-share.svg";
     } else {
         modal.style.display = "flex";
+        share.src = "./images/icon-share-active.svg";
     }
 })

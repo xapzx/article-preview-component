@@ -23,6 +23,7 @@ body {
 main {
     border-radius: 8px;
     background-color: #fff;
+    max-width: 450px;
 }
 
 @media (min-width: 800px) {
@@ -33,6 +34,7 @@ main {
     main {
         display: flex;
         max-width: 750px;
+        min-width: 600px;
     }
 }
 
@@ -42,13 +44,14 @@ picture {
     background-position: 0 0;
     background-size: 100%;
     min-height: 13.5rem;
-    border-radius: 8px 0 0 8px;
+    border-radius: 8px 8px 0 0;
 }
 
 @media (min-width: 800px) {
     picture {
         min-width: 18rem;
         background-size: cover;
+        border-radius: 8px 0 0 8px;
     }
 }
 
@@ -93,10 +96,23 @@ article > h1 {
     background-color: var(--light-grayish-blue);
     padding: 0.5rem;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .share-modal {
     display: none;
+    background-color: var(--very-dark-grayish-blue);
+    gap: 1rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0 0 8px 8px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.share-active {
+    background-color: var(--desaturated-dark-blue);
 }
 
 .share-modal > p {
@@ -119,6 +135,7 @@ article > h1 {
     }
 
     .share-modal {
+        all:unset;
         display: none;
         background-color: var(--very-dark-grayish-blue);
         gap: 1rem;
